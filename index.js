@@ -789,30 +789,46 @@ let rows = [];
 
 
 for(holes of input){
-   let fmax = 127;
-   let bmin = 0;
+   let fmax = 63;
+   let bmin = 1;
    let rmax = 7;
    let lmin = 4;
   
   
    for(letter of holes){
-    if (letter == 'F')(rmax =(Math.ceil(fmax * bmin)/2));
-    if (letter == 'B')(lmin =(Math.floor(fmax * bmin)/2));
-    if (letter == 'R')(rmax =(Math.ceil(rmax * lmin)/2));
-    if (letter == 'L')(lmin =(Math.floor(rmax * lmin)/2));
+    if (letter == 'F')(rows =(Math.ceil(fmax * bmin)/2));
+    if (letter == 'B')(rows =(Math.floor(fmax * bmin)/2));
+    if (letter == 'R')(cmax =(Math.ceil(rmax * lmin)/2));
+    if (letter == 'L')(cmax =(Math.floor(rmax * lmin)/2));
   }
-  var sqr = rmax* 8 +cmax ;
+  var sqr = rows * 8 +cmax ;
+  dugholes.push(rows);
+  dugholes.push(cmax);
   dugholes.push(sqr);
   console.log(sqr)
+
+  for(let i = 0; i < input.length;i++){
+    let min;
+    let max;
+    if(holes[0]> max){
+      max = holes[0]
+    }
+    if(holes[0] < min){
+      min = holes[0]
+    }
+    console.log(min,max)
+  }  
 };
-for(let i = 0; i < input.length;i++){
-  if(holes[i]> max){
-    max = hole[i]
-  }
-  if(holes[i] < min){
-    min = hole[i]
-  }
-  console.log(min,max)
+
+
+//number 2
+for(let i = 0;i < input.length;i++){
+    let small;
+    let large;
+    //put min where small is
+    var temp =  (small < ) ? `${input[i]}`: 'nothing';
+    //put max in large()
+    var maximum = (large > ) ? `${input[i]}` : 'nothing';
 }
 
 
