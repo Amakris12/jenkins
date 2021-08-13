@@ -800,27 +800,27 @@ for(holes of input){
     if (letter == 'B')(rows =(Math.floor(fmax * bmin)/2));
     if (letter == 'R')(cmax =(Math.ceil(rmax * lmin)/2));
     if (letter == 'L')(cmax =(Math.floor(rmax * lmin)/2));
+    for(let i = 0; i < holes.length;i++){
+      let max = 0;
+      let min = 1027;
+      if(max < holes[i]){
+        var large = holes
+      }
+      if(min > holes[i]){
+        var small = holes
+      }
+      console.log(small,large)
+    } 
   }
   var sqr = rows * 8 +cmax ;
   dugholes.push(rows);
   dugholes.push(cmax);
   dugholes.push(sqr);
-  console.log(sqr)
-
-  for(let i = 0; i < input.length;i++){
-    let min;
-    let max;
-    if(holes[0]> max){
-      max = holes[0]
-    }
-    if(holes[0] < min){
-      min = holes[0]
-    }
-    console.log(min,max)
-  }  
+  console.log(sqr) 
 };
 
 
+/*
 //number 2
 for(let i = 0;i < input.length;i++){
     let small;
@@ -840,3 +840,4 @@ for(let i = 0;i < input.length;i++){
 
 
 
+*/
